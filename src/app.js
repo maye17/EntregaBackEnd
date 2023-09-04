@@ -28,11 +28,18 @@ const authAdminRouter = require("./routes/authadmin.router.js");
 const AllUserRouter = require("./routes/alluser.router.js");
 const userProductRouter = require("./routes/userProduct.router.js");
 const cartRouter = require("./routes/cart.router.js")
+const config = require('../src/config/config.js')
+
+console.log(config)
 
 
+
+
+//DEFINIENDO EL SERVER
 const httpServer= app.listen(port,()=>{
     console.log(`server listening  http://localhost:${port}`);
 })
+
 
 
 socketServer(httpServer);
